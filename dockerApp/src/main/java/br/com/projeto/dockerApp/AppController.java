@@ -1,6 +1,8 @@
 package br.com.projeto.dockerApp;
 
-import org.apache.logging.log4j.message.Message;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/app")
 public class AppController {
     
+	@Autowired
+	private AppService appService;
+    
     @GetMapping
     public void ping() {
 
@@ -16,4 +21,11 @@ public class AppController {
 
     }
 
+    @GetMapping("/obterTodos")
+    public List<Produto> obterTodos() {
+
+        System.out.println("obterTodos");
+		return this.appService.obterTodos();
+
+    }
 }
