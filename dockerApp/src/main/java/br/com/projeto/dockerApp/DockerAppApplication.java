@@ -6,19 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DockerAppApplication {
 
-/* 
-	@Autowired
-	private AppService appService;
- */
 	public static void main(String[] args) {
 		SpringApplication.run(DockerAppApplication.class, args);
 
 		System.out.println("----------------------");
 		System.out.println("ENTROU NA APLICAÇÃO!!!");
 		System.out.println("----------------------");
-/* 
-		List<Produto> produtos = appService.ob
- */
+
 	}
 
 }

@@ -1,4 +1,4 @@
-package br.com.projeto.dockerApp;
+package br.com.projeto.dockerApp.model;
 
 import java.util.Objects;
 
@@ -6,17 +6,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Produto {
+public class Documento {
 
     @Id
     private int id;
     private String nome;
 
 
-    public Produto() {
+    public Documento() {
     }
 
-    public Produto(int id, String nome) {
+    public Documento(int id, String nome) {
         this.id = id;
         this.nome = nome;
     }
@@ -37,12 +37,12 @@ public class Produto {
         this.nome = nome;
     }
 
-    public Produto id(int id) {
+    public Documento id(int id) {
         setId(id);
         return this;
     }
 
-    public Produto nome(String nome) {
+    public Documento nome(String nome) {
         setNome(nome);
         return this;
     }
@@ -51,11 +51,11 @@ public class Produto {
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof Produto)) {
+        if (!(o instanceof Documento)) {
             return false;
         }
-        Produto produto = (Produto) o;
-        return id == produto.id && Objects.equals(nome, produto.nome);
+        Documento documento = (Documento) o;
+        return id == documento.id && Objects.equals(nome, documento.nome);
     }
 
     @Override
@@ -70,6 +70,5 @@ public class Produto {
             ", nome='" + getNome() + "'" +
             "}";
     }
-
 
 }

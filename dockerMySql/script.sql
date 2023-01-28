@@ -1,13 +1,13 @@
 CREATE DATABASE IF NOT EXISTS
     appbanco;
-USE appusuario;
+USE appbanco;
 
-CREATE TABLE IF NOT EXISTS produto (
+CREATE TABLE IF NOT EXISTS documento (
     id INT(11) AUTO_INCREMENT,
-    nome VARCHAR(255),
-    preco DECIMAL(10,2),
+    nome VARCHAR(255)
     PRIMARY KEY (id)
 );
 
-INSERT INTO produto VALUE(0, 'Produto 1', 4500);
-INSERT INTO produto VALUE(0, 'Produto 2', 283);
+INSERT INTO produto VALUE(0, 'Documento 1');
+INSERT INTO produto VALUE(0, 'Documento 2');
+INSERT INTO produto VALUE(0, 'Documento 3');
