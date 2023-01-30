@@ -1,0 +1,6 @@
+br\com\projeto\dockerApp\service\AppService.class
+br\com\projeto\dockerApp\controller\AppController.class
+br\com\projeto\dockerApp\ServletInitializer.class
+br\com\projeto\dockerApp\repository\AppRepository.class
+br\com\projeto\dockerApp\model\Documento.class
+br\com\projeto\dockerApp\DockerAppApplication.class
